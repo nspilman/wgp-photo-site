@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
                 pagination : opt_pagi,
                 //navigation : false,
                 singleItem: opt_single,
-                autoPlay : 10000,
+                autoPlay : 5000,
                 slideSpeed : 1500,
                 paginationSpeed : 1500,
                 transitionStyle: opt_transition,
