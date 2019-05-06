@@ -40,65 +40,37 @@
 
 
 <header id="header" class="header-v2">
-	<div class="nav">
-		<div class="theme-logo">
-			<div class="theme-logo-content">
-				<div class="tl-content-img">
-					<a href="index.html"><img src="images/logodark.png" alt="logo"></a>
+		<div class="nav" style="background-color:rgb(255,255,255,.5)">
+				<div class="theme-logo">
+					<div class="theme-logo-content">
+						<a href="index.html"><img src="images/wineguy_photos/wineguy_logo.webp" style="max-height: 10vh; max-width: 40vw;" alt="logo"></a>
+					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="trigger-menu">
-			<div class="shape">
-				<div class="bar">
-					<span></span>
-					<span></span>
-					<span></span>
+				
+				<div class="trigger-menu">
+					<div class="shape">
+						<div class="bar">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<i class="fa fa-arrow-right"></i>
+					</div>
 				</div>
-				<i class="fa fa-arrow-right"></i>
-			</div>
-		</div>
-
-			
-		<div class="social-link">
-			<ul>
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			</ul>
-		</div>
-
-		<div class="block-menu">
-			<div class="menu-content">
-				<ul class="menu">
-			        <li class="leaf first expanded">
-			        	<a href="index.html#header" title="">Home</a>
-			        	<ul class="menu">
-			                <li><a href="index.html">Home 1</a></li>
-		                	<li><a href="index-2.html">Home 2</a></li>
-			            </ul>
-			        </li>
-			        <li class="leaf"><a href="index.html#history" title="">History</a></li>
-			        <li class="leaf"><a href="index.html#services" title="">Services</a></li>
-			        <li class="leaf"><a href="index.html#portfolio" title="">Portfolio</a></li>
-			        <li class="leaf"><a href="index.html#pricing" title="">Pricing</a></li>
-			        <li class="expanded">
-			            <a href="blog-right-sidebar.html" title="" class="active">Blog</a>
-			            <ul class="menu">
-			                <li><a href="blog-left-sidebar.html" title="">Blog left sidebar</a></li>
-			                <li><a href="blog-right-sidebar.html" title="">Blog right sidebar</a></li>
-			                <li><a href="blog-masonry.html" title="" class="active">Blog masory</a></li>
-			                <li><a href="blog-masonry-fluid.html" title="">Blog masory fluid</a></li>
-		                	<li><a href="blog-single.html" title="">Blog Singer post</a></li>
-			            </ul>
-			        </li>
-			        <li class="last leaf"><a href="index.html#contact" title="">Contact</a></li>
-			    </ul>
-			</div>
-		</div>
 		
-	</div>
+				<div class="block-menu">
+					<div class="menu-content">
+						<ul class="menu">
+							<li class="leaf"><a href="/" title="">Home</a></li>
+							<li class="leaf"><a href="#about" title="">About</a></li>
+							<li class="leaf"><a href="#services" title="">Services</a></li>
+							<li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+							<li class="last leaf"><a href="#contact" title="">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+		
+			</div>
 	<div class="header">
 		<div class="bg-header">
 			<div class="bg-img bg-2"></div>
@@ -124,102 +96,91 @@
 						<div id="type-masory" class="blog-list blog-masory row">
 							<post-template v-for="photo in displayedPhotos" :filepath="'./images/photos_from_dan/'+ photo.category + '/' + photo.url"/>
 						</div>
-						<div class="row">
-	        		<div class="col-md-12">
-		            		<div class="load-more-button text-center">
-		            			<a href="#" class="link-more"><i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;Load more</a>
-		            		</div>
-	            		</div>
-	        		</div>
-
 					</div>
 				</div>	
 			</div>
 		</div>
 	</section>
 </div>
-<footer>
-	<div class="footer-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-5 col-xs-12">
-					<div class="theme-info">
-						<div class="theme-logo">
-							<div class="logo-content-img">
-								<img src="images/logotheme.png" alt="logo">
+<footer id="contact">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-xs-12">
+						<div class="theme-info">
+							<div class="theme-logo">
+								<div class="logo-content-img">
+									<img src="images/wineguy_photos/wineguy_logo.webp" style="background-color:ivory; border-radius:1em; max-height: 10vh; max-width: 40vw;" alt="logo">
+								</div>
 							</div>
-						</div>
-						<div class="theme-description bor-underline">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque ne</p>
-						</div>
-						<div class="theme-address">
-							<ul class="text-link">
-								<li><a href="#"><span class="icon-square"><i class="fa fa-map-marker"></i></span>300 King Street, Melbourne. Australia</a></li>
-								<li><a href="#"><span class="icon-square"><i class="fa fa-phone"></i></span>+61 3 8376 6284 12345</a></li>
-								<li><a href="#"><span class="icon-square"><i class="fa fa-envelope"></i></span>SAYHELL@UENEO.com</a></li>
-							</ul>
-						</div>
-						<div class="theme-time">
-							<span class="theme-time-title">Opening Hours</span>
-							<div class="theme-time-detail">
-								<p>Mon - Sat  :   8am - 5pm <br>Sunday : 8am - 10am</p>
+							<div class="theme-description bor-underline">
+								<p>I'm Dan Steffen and my "day job" is as a "Wine Guy" working for an importer and selling to wine distributors around the country. Photography is a passion of mine that I've enjoyed since I received my first camera when I was 9. In the last several years, however, I've become quite serious about it.
+	
+										Wine Guy Photography is the natural extention.
+										
+										​Whether your shoot is indoors or out, I can capture the images you'll always cherish. Whatever your photography needs, I can help.</p>
+							</div>
+							<div class="theme-address">
+								<ul class="text-link">
+									<li><span class="icon-square"><i class="fa fa-phone"></i></span>608-445-5161</li>
+									<li><a href="mailto:WineGuyPhotography@gmail.com"><span class="icon-square"><i class="fa fa-envelope"></i></span>WineGuyPhotography@gmail.com</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-5 col-xs-12 col-sm-offset-2">
-					<div class="theme-contact">
-						<h3 class="h3 bor-underline">Contact</h3>
-						<p>Bencidunt nibh pulvinar onec rutrum congue </p>
-						<div class="form">
-							<form class="contact-form" action="processContact.php" method="post">
-								<div class="form-input">
-									<input type="text" placeholder="Name" name="name">
-								</div>
-								<div class="form-input">
-									<input type="text" placeholder="Email" name="email">
-								</div>
-								<div class="form-input">
-									<input type="text" placeholder="Subject" name="subject">
-								</div>
-								<div class="form-textarea">
-									<textarea placeholder="Messange" name="message"></textarea>
-								</div>
-								<div class="form-submit">
-									<input class="submit-contact type-but but-light pull-right" type="submit" value="Send massage">
-								</div>
-								<div id="contact-content"></div>
-							</form>
+					<div class="col-sm-5 col-xs-12 col-sm-offset-2">
+						<div class="theme-contact">
+							<h3 class="h3 bor-underline">Contact</h3>
+							<p>Bencidunt nibh pulvinar onec rutrum congue </p>
+							<div class="form">
+								<form class="contact-form" action="processContact.php" method="post">
+									<div class="form-input">
+										<input type="text" placeholder="Name" name="name">
+									</div>
+									<div class="form-input">
+										<input type="text" placeholder="Email" name="email">
+									</div>
+									<div class="form-input">
+										<input type="text" placeholder="Subject" name="subject">
+									</div>
+									<div class="form-textarea">
+										<textarea placeholder="Messange" name="message"></textarea>
+									</div>
+									<div class="form-submit">
+										<input class="submit-contact type-but but-light pull-right" type="submit" value="Send massage">
+									</div>
+									<div id="contact-content"></div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="footer-copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="footer-copyright-content">
-						<div class="ds-table-auto">
-							<div class="ds-cell-auto">
-								<p>© 2014 Zankover designs - all right reserved </p>
-								<div class="social-link nav-icon-style2">
-									<ul>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-behance"></i></a></li>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									</ul>
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="footer-copyright-content">
+							<div class="ds-table-auto">
+								<div class="ds-cell-auto">
+									<p>© 2014 Zankover designs - all right reserved </p>
+									<div class="social-link nav-icon-style2">
+										<ul>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-behance"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>	
+						</div>	
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>	
-</footer>
-
+		</div>	
+	</footer>
 <!-- SCRIPT -->
 <script>const portfolioCategory = "weddingPhotos" </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
