@@ -94,19 +94,19 @@ const allPhotos = [
 const portfolioSectionLinks = {
   template:`
   <div class = "container">
-  <a href = "/portfolio.html">
+  <a href = "./portfolio.html">
     <button class ="btn" >All Photos</button>
   </a>
-  <a href = "/portfolio-weddings.html">
+  <a href = "./portfolio-weddings.html">
     <button class ="btn">Wedding Photos</button>
   </a>
-  <a href = "/portfolio-events.html">
+  <a href = "./portfolio-events.html">
     <button class ="btn" >Event Photos</button>
   </a>
-  <a href = "/portfolio-family.html">
+  <a href = "./portfolio-family.html">
     <button class ="btn" >Family Photos</button>
   </a>
-  <a href = "/portfolio-seniorphotos.html">
+  <a href = "./portfolio-seniorphotos.html">
   <button class ="btn" >Senior Photos</button>
 </a>
 </div>
