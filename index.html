@@ -5,13 +5,17 @@
 <!--[if IE 9 ]>    <html class="ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="en"> <!--<![endif]-->
 <head>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <meta charset="UTF-8">
 
     <title>Wine Guy Photography - Professional & Affordable</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="shortcut icon" type="image/png" href="./images/wineguy_photos/wineguy_favicon.png"/>
     <!-- ///////////////// FONT  ///////////////// -->
-
+	<script>
+		document.addEventListener('contextmenu',e => {e.preventDefault()})
+	</script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7cCrimson+Text:400,600,400italic,700' rel='stylesheet' type='text/css'>
 
     <!-- ///////////////// CSS  ///////////////// -->
@@ -30,13 +34,13 @@
 <body>
 
 <!-- Preloader -->
-<div id="loader-wrapper">
+<!-- <div id="loader-wrapper">
     <div class="loader-logo">
         <img src="images/loader2.gif" alt="">
     </div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
-</div>
+</div> -->
 
 
 <header id="header" class="header-v2">
@@ -64,7 +68,8 @@
 			        <li class="leaf"><a href="/" title="">Home</a></li>
 			        <li class="leaf"><a href="#about" title="">About</a></li>
 			        <li class="leaf"><a href="#services" title="">Services</a></li>
-			        <li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+					<li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+					<li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
 			        <li class="last leaf"><a href="#contact" title="">Contact</a></li>
 			    </ul>
 			</div>
@@ -73,137 +78,25 @@
 	</div>
 	<div class="header">
 		<div class="header-slider">
-			<div class="theme-slider" data-slider="single" data-control="true" data-transition="">
+			<div class="photo-slider" data-slider="single" data-control="true" data-transition="" id="homepageSlider">
 				<div class="theme-slider-content">
 					<div class="theme-slider-item">
-						<div class="title-header white" style="top:80%;">
+						<div class="title-header white" style="top:65%">
 							<h2 class="h2">Wine Guy Photography</h2>
 							<p>Professional &amp; Affordable</p>
 						</div>
 						<div class="ts-item-background">
-							<img src="images/photos_from_dan/homepageSlider/BoysAlbumCoverSunflowerscopy2.jpg" alt="background">
+							<img :src="currentPhoto" alt="background" class="img-fluid header-photo">
 							<div class="bg-overlay"></div>
 						</div>
-					</div>
-					<div class="theme-slider-item">
-						<div class="title-header white" style="top:80%;">
-							<h2 class="h2">Wine Guy Photography</h2>
-							<p>Professional &amp; Affordable</p>
+						<div class="theme-slider-control slide-crt2">
+							<span class="usc-control usc-preview"><i class="fa fa-angle-left"></i></span>
+							<span class="usc-control usc-next"><i class="fa fa-angle-right" @click="nextPhoto"></i></span>
+							<div class="bar">
+								<div class="bar-left" @click="previousPhoto">Previous Photo</div>
+								<div class="bar-right" @click="nextPhoto"> Next Photo</div>
+							</div>
 						</div>
-						<div class="ts-item-background">
-							<img src="images/photos_from_dan/homepageSlider/DSC_0353-2.jpg" alt="background">
-							<div class="bg-overlay"></div>
-						</div>
-					</div>
-					<div class="theme-slider-item">
-						<div class="title-header white" style="top:80%;">
-							<h2 class="h2">Wine Guy Photography</h2>
-							<p>Professional &amp; Affordable</p>
-						</div>
-						<div class="ts-item-background">
-							<img src="images/photos_from_dan/homepageSlider/DSC_2926.jpg" alt="background">
-							<div class="bg-overlay"></div>
-						</div>
-					</div>
-					<div class="theme-slider-item">
-						<div class="title-header white" style="top:80%;">
-							<h2 class="h2">Wine Guy Photography</h2>
-							<p>Professional &amp; Affordable</p>
-						</div>
-						<div class="ts-item-background">
-							<img src="images/photos_from_dan/homepageSlider/DSC_4096.jpg" alt="background">
-							<div class="bg-overlay"></div>
-						</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_4876.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_5055.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_5694.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_6302.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_7668.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_8440-2.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/DSC_8891.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/EmmyWiedemann.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
-					</div>
-					<div class="theme-slider-item">
-							<div class="title-header white" style="top:80%;">
-								<h2 class="h2">Wine Guy Photography</h2>
-								<p>Professional &amp; Affordable</p>
-							</div>
-							<div class="ts-item-background">
-								<img src="images/photos_from_dan/homepageSlider/MakenzieWallace.jpg" alt="background">
-								<div class="bg-overlay"></div>
-							</div>
 					</div>
 				</div>
 				</div>
@@ -380,6 +273,9 @@
 											<div class="author-description">
 												<span class="author-name"><a href="#">Angie L</a></span>
 											</div>
+											<div class="link-detail" style="margin:1em; color:white;">
+												<a href="./clientLove.html" class="btn btn-default" style="color:white; border:2px solid white;">See More</a>
+											</div>
 										</div>
 									</div>
 									<div class="theme-slider-item">
@@ -394,6 +290,9 @@
 											<div class="author-description">
 												<span class="author-name"><a href="#">Katie L</a></span>
 											</div>
+											<div class="link-detail" style="margin:1em; color:white;">
+												<a href="./clientLove.html" class="btn btn-default" style="color:white; border:2px solid white;">See More</a>
+											</div>
 										</div>
 									</div>
 									<div class="theme-slider-item">
@@ -407,6 +306,9 @@
 										<div class="ts-item-footer">
 											<div class="author-description">
 												<span class="author-name"><a href="#"> Britt W.</a></span>
+											</div>
+											<div class="link-detail" style="margin:1em; color:white;">
+												<a href="./clientLove.html" class="btn btn-default" style="color:white; border:2px solid white;">See More</a>
 											</div>
 										</div>
 									</div>
@@ -506,6 +408,7 @@
 </footer>
 
 <!-- SCRIPT -->
+<script type="text/javascript" src="js/vue.js"></script>
 <script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.owl.carousel.js"></script>
 <script type="text/javascript" src="js/libs/magnific-popup.js"></script>
@@ -518,5 +421,6 @@
 <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

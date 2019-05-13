@@ -1,0 +1,86 @@
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Wine Guy Photography - Professional & Affordable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" type="image/png" href="./images/wineguy_photos/wineguy_favicon.png"/>
+
+	<link type="text/css" rel="stylesheet" href="css/font-awesome.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/magnific-popup.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/><!-- My CSS -->
+    <link type="text/css" rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+        <header id="header" class="header-v2">
+        <div class="nav" style="background-color:rgb(255,255,255,.5)">
+            <div class="theme-logo">
+                <div class="theme-logo-content">
+                    <a href="index.html"><img src="images/wineguy_photos/wineguy_logo.webp" style="max-height: 10vh; max-width: 40vw;" alt="logo"></a>
+                </div>
+            </div>
+            
+            <div class="trigger-menu">
+                <div class="shape">
+                    <div class="bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+    
+            <div class="block-menu">
+                <div class="menu-content">
+                    <ul class="menu">
+                        <li class="leaf"><a href="/" title="">Home</a></li>
+                        <li class="leaf"><a href="#about" title="">About</a></li>
+                        <li class="leaf"><a href="#services" title="">Services</a></li>
+                        <li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+                        <li class="last leaf"><a href="#contact" title="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+<section id="testimonials" class="section section-history">
+    <div class="container" v-for="testimonial in testimonials">
+        <div class="row">
+                <div class="col-sm-4 col-tn-8 col-xs-10 col-tn-offset-2 col-xs-offset-1 col-sm-offset-0 pull-left">
+                        <div class="history-logo">
+                            <div class="frame-img">
+                                <img :src="'./images/photos_from_dan/clientLove/'+testimonial.url" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-sm-7 col-xs-12">
+                <div class="section-content content-italic">
+                    <p>
+                        {{testimonial.text}}
+                    </p>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+
+</section>
+
+</body>
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.owl.carousel.js"></script>
+<script type="text/javascript" src="js/libs/magnific-popup.js"></script>
+<script type="text/javascript" src="js/libs/jquery.appear.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/libs/jquery-isotope.js"></script>
+<script type="text/javascript" src="js/libs/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="js/libs/scrollspy.js"></script>
+<script type="text/javascript" src="js/libs/jquery.infinitescroll.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/clientLove.js"></script>

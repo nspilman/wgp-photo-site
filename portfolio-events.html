@@ -26,7 +26,9 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
-
+	<script>
+		document.addEventListener('contextmenu',e => {e.preventDefault()})
+	</script>
 </head>
 <body>
 
@@ -63,41 +65,45 @@
 					<div class="menu-content">
 						<ul class="menu">
 							<li class="leaf"><a href="/" title="">Home</a></li>
-							<li class="leaf"><a href="#about" title="">About</a></li>
-							<li class="leaf"><a href="#services" title="">Services</a></li>
+							<li class="leaf"><a href="/#about" title="">About</a></li>
+							<li class="leaf"><a href="/#services" title="">Services</a></li>
 							<li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+							<li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
 							<li class="last leaf"><a href="#contact" title="">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 		
 			</div>
-	<div class="header">
-		<div class="bg-header">
-			<div class="bg-img bg-2"></div>
-			<div class="bg-overlay"></div>
-		</div>
-		<div class="title-header">
-			<div class="">
-				<h2 class="h2">Masonry</h2>
-				<p>Our perspective on digital (and other things)</p>
-			</div>
-		</div>
-	</div>	
+			<div class="header">
+				<div class="bg-header" style="height:5vh">
+			
+					<!-- <div class="bg-img bg-2"></div> -->
+					<!-- <div class="bg-overlay"></div> -->
+				</div>
+				<div class="title-header">
+					<h1 style="color: black">Event Photography</h1>
+				</div>
+			</div>	
 </header>
 <div class="main-page bg-gray padding-tn">
 	<section class="section-blog-massory">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="post-content" id="portfolio-photos">
-						<div class = "container">
-						<portfolio-section-links/>
-						</div>
-						<div id="type-masory" class="blog-list blog-masory row">
-							<post-template v-for="photo in displayedPhotos" :filepath="'./images/photos_from_dan/'+ photo.category + '/' + photo.url"/>
-						</div>
-					</div>
+						<div class="post-content" id="portfolio-photos">
+								<div class = "container">
+										<portfolio-section-links/>
+								</div>
+								<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
+									<div class = "photoModal">
+									  <img :src="selectedPhoto" alt="photograph">	
+									</div>
+								  </div>
+								  <div id="type-masory" class="blog-list blog-masory row">
+										<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :filepath="'./images/photos_from_dan/'+ photo.category + '/' + photo.url"/>
+									</div>
+							</div>
 				</div>	
 			</div>
 		</div>
