@@ -124,20 +124,25 @@
 						<span>Member - Professional Photographers of America</span>
 					</div>
 					<div class="section-content content-italic">
-						<p>I'm Dan Steffen and my "day job" is as a "Wine Guy" working for an importer and selling to wine distributors around the country.  
-
- 
-
-							Photography is a passion of mine that I've enjoyed since I received my first camera when I was 9.  
-							
-							In the last several years, however, I've become
-							
-							quite serious about it.  
+						<p>Hello and welcome! I am thrilled that you have taken the time to look at my work, and that you are considering booking Wine Guy Photography.
 						</p>
 						<p>
-							Wine Guy Photography is the natural extention.  
+							I’m Dan Steffen and I’ve been avidly pursuing all things photography site I received my first camera when I was 9 years old. Rather than a long and boring bio, I wanted to share a few “fun facts” about me so that you can get to know me a little more.
 						</p>
-							 
+							 <ul>
+								 <li>
+									The “Wine Guy” comes from my day job of working as a wine importer. I travel the country selling the wines I represent to wine distributors (who in turn sell to shops and restaurants). 30+ years in the Wine Biz.
+								</li>
+								<li>
+									Thanks to the wine business, I’ve been fortunate enough to see and photograph much of the world including Europe, Australia, Africa and South America.
+								</li>
+								<li>
+									My wife, Christine (who’s an amazing midwife & pre-natal yoga instructor!) and I were married in 2000 and we have 3 awesome boys (Ben, Julian and Samuel) a goofy Irish Doodle (Flynn), and a couple of cool cats (Squirrel & Possum).
+								</li>	
+								<li>
+									The boys are active in Volleyball and Ultimate Frisbee and nothing makes us happier than watching them compete.
+								</li>
+							 </ul>
 							<p>
 							​Whether your shoot is indoors or out, I can capture the images you'll always cherish. Whatever your photography needs, I can help.
 							
@@ -154,6 +159,11 @@
 
 	<!-- Section Services -->
 	<section id="services" class="section section-img img-half section-services">
+			<div v-if="pricingModal" class ="pricingModalWrapper" @click="closeModal">
+					<div class = "pricingModal">
+					  <div id="pricing"></div>
+					</div>
+				  </div>
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-6">
 				<div class="parallax-content">
@@ -170,10 +180,12 @@
 										<h6 class="h6 project-title">WEDDINGS</h6>
 									</div>
 									<div class="project-body">
-										<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta.</p>
+										<p>Your wedding day is one of the most important days of your life. I believe that you should choose a photographer that you feel a deep connection with, and whose style of images truly resonates with you.</p>
 									</div>
 									<div class="link-detail">
 										<a href="./portfolio-weddings.html" class="btn btn-default">See More</a>
+										<button class="btn btn-default"@click="clicked">Pricing</button>
+
 									</div>
 								</div>
 							</div>
@@ -184,7 +196,7 @@
 										<h6 class="h6 project-title">SENIOR PHOTOS</h6>
 									</div>
 									<div class="project-body">
-										<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta.</p>
+										<p>I absolutely love shooting Seniors! My sessions are less about taking a great portrait for the yearbook (although we’ll definitely do that!) and more about getting a ton of great images to commemorate this awesome rite of passage and moment in time.</p>
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-seniorphotos.html" class="btn btn-default">See More</a>
@@ -198,7 +210,7 @@
 										<h6 class="h6 project-title">FAMILY AND PETS</h6>
 									</div>
 									<div class="project-body">
-										<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta.</p>
+										<p>Everybody finally together for the holidays? Want to capture the kids at this adorable age? New puppy? Whatever your portrait needs, I can make it happen for you.</p>
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-family.html" class="btn btn-default">See More</a>
@@ -212,7 +224,7 @@
 										<h6 class="h6 project-title">SPECIAL EVENTS</h6>
 									</div>
 									<div class="project-body">
-										<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta.</p>
+										<p>Whether it be a family reunion, bat mitzvah, quinceañera, anniversary, or birthday party. I’ll be there to commemorate your special event.</p>
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-events.html" class="btn btn-default">See More</a>
@@ -339,19 +351,13 @@
 								<img src="images/wineguy_photos/wineguy_logo.webp" style="background-color:ivory; border-radius:1em; max-height: 10vh; max-width: 40vw;" alt="logo">
 							</div>
 						</div>
-						<div class="theme-description bor-underline">
-							<p>I'm Dan Steffen and my "day job" is as a "Wine Guy" working for an importer and selling to wine distributors around the country. Photography is a passion of mine that I've enjoyed since I received my first camera when I was 9. In the last several years, however, I've become quite serious about it.
-
-									Wine Guy Photography is the natural extention.
-									
-									​Whether your shoot is indoors or out, I can capture the images you'll always cherish. Whatever your photography needs, I can help.</p>
-						</div>
 						<div class="theme-address">
 							<ul class="text-link">
 								<li><span class="icon-square"><i class="fa fa-phone"></i></span>608-445-5161</li>
 								<li><a href="mailto:WineGuyPhotography@gmail.com"><span class="icon-square"><i class="fa fa-envelope"></i></span>WineGuyPhotography@gmail.com</a></li>
 							</ul>
 						</div>
+						<img src="images/wineguy_photos/contact_section.jpeg"/>
 					</div>
 				</div>
 				<div class="col-sm-5 col-xs-12 col-sm-offset-2">

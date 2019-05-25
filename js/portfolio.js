@@ -137,7 +137,6 @@ const photoComponent = {
   },
   methods:{
     sendOpenImageMessageToParent(){
-      console.log("we're trying, boss")
       this.$emit('opened-image',this.filepath)
     }
   },
