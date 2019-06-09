@@ -46,7 +46,7 @@ const photoSlider = new Vue({
       created(){
         this.autoplay()
         document.addEventListener('contextmenu',e => {
-          // e.preventDefault();
+          e.preventDefault();
           const copyright = document.querySelector("#copyright")
           copyright.style.display = "block";
           setTimeout(()=>{copyright.style.display="none"},2000)

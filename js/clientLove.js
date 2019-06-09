@@ -24,5 +24,13 @@ var app = new Vue({
   el: "#testimonials",
   data: {
     testimonials: clientLove,
+   },
+   created(){
+      document.addEventListener('contextmenu',e => {
+      e.preventDefault();
+      const copyright = document.querySelector("#copyright")
+      copyright.style.display = "block";
+      setTimeout(()=>{copyright.style.display="none"},2000)
+    })
    }
   })
