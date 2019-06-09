@@ -37,7 +37,6 @@ const photoSlider = new Vue({
       },
       autoplay(){
         setInterval(() => {
-          console.log(this.autoplay_bool)
           // if(this.autplay_bool==true){
             this.nextPhoto()
           // }
@@ -60,7 +59,7 @@ const photoSlider = new Vue({
       <div class = "container" style="padding-top:5em;">
       <h1> {{ service }} </h1>
       <div class = "row">
-        <div v-for="package in packages[service]" class = "col-sm-5" style="background-color:rgb(255,255,255,.5); padding:2em;margin:.5em; border-radius:1em;">
+        <div v-for="package in packages[service]" class = "col-sm-5" style="background-color:rgb(255,255,255,.7); padding:2em;margin:.5em; border-radius:1em;">
           <h3>
             {{package.name}} - {{package.price}}
           </h3>
