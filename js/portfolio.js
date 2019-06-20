@@ -194,7 +194,6 @@ var app = new Vue({
 
     },
     openImage(e){
-      console.log("We've broken into the secondary")
       this.selectedPhoto = e;
       this.toggleShow()
       
@@ -209,6 +208,7 @@ var app = new Vue({
    document.addEventListener('contextmenu',e => {
     e.preventDefault();
     const copyright = document.querySelector("#copyright")
+    console.log(copyright)
     copyright.style.display = "block";
     setTimeout(()=>{copyright.style.display="none"},2000)
   })
