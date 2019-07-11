@@ -67,7 +67,15 @@
 							<li class="leaf"><a href="./" title="">Home</a></li>
 							<li class="leaf"><a href="./#about" title="">About</a></li>
 							<li class="leaf"><a href="./#services" title="">Services</a></li>
-							<li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+							<li class="expanded">
+								<a href="./portfolio.html" title="">Portfolio</a>
+										<ul class="menu">
+											<li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Wedding Photos</a></li>
+											<li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Event Photos</a></li>
+											<li><a class = "portfolioMenuDropdown" href="./portfolio-family.html" title="">Family Photos</a></li>
+											<li><a class = "portfolioMenuDropdown" href="./portfolio-seniorphotos.html" title="">Senior Photos</a></li>
+										</ul>
+							</li>	
 							<li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
 							<li class="last leaf"><a href="./#contact" title="">Contact</a></li>
 						</ul>
@@ -92,9 +100,6 @@
 			<div class="row">
 				<div class="col-md-12">
 						<div class="post-content" id="portfolio-photos">
-								<div class = "container">
-										<portfolio-section-links/>
-								</div>
 								<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
 									<div class = "photoModal">
 									  <img :src="selectedPhoto" alt="photograph">	

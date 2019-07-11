@@ -32,9 +32,6 @@ const photoSlider = new Vue({
       nextPhoto(){
         this.currentPhotoIndex < this.homepagePhotos.length - 1 ? this.currentPhotoIndex++ : this.currentPhotoIndex = 0;
       },
-      previousPhoto(){
-        this.currentPhotoIndex > 0 ? this.currentPhotoIndex-- : this.currentPhotoIndex = this.homepagePhotos.length -1;
-      },
       autoplay(){
         setInterval(() => {
           // if(this.autplay_bool==true){
@@ -46,7 +43,7 @@ const photoSlider = new Vue({
       created(){
         this.autoplay()
         document.addEventListener('contextmenu',e => {
-          e.preventDefault();
+          // e.preventDefault();
           const copyright = document.querySelector("#copyright")
           copyright.style.display = "block";
           setTimeout(()=>{copyright.style.display="none"},2000)

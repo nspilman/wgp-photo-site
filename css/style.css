@@ -3367,12 +3367,12 @@ footer .bor-underline:after {
 }
 
 .photo-slider{
-    max-height:130vh;
+    max-height:105vh;
     background-color:black;
 }
 
 .header-photo{
-    height: 130vh;
+    height: 105vh;
 }
 
 #copyright{
@@ -3387,4 +3387,34 @@ footer .bor-underline:after {
     color:white;
     padding-bottom:.5em;
     padding-top:.3em;
+}
+
+.portfolioMenuDropdown{
+    color:white;
+    background-color: white;
+}
+
+.portfolioMenuDropdown:hover{
+    background-color: black;
+}
+
+.bg-header{
+    padding:3em 0;
+    min-height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-photo{
+        height: auto;
+    }
+    h1{
+        font-size:2em;
+    }
+    .history-logo{
+        margin-bottom: 0px !important;
+    }
+
+    .section-content{
+        margin-bottom: 40px !important;
+    }
 }

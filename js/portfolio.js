@@ -98,28 +98,6 @@ const categoryHash = {
   category: "familyPhotos", categoryName:"Family Photos"
 }
 
-const portfolioSectionLinks = {
-  template:`
-  <div class = "container">
-  <a href = "./portfolio.html">
-    <button class ="btn" >All Photos</button>
-  </a>
-  <a href = "./portfolio-weddings.html">
-    <button class ="btn">Wedding Photos</button>
-  </a>
-  <a href = "./portfolio-events.html">
-    <button class ="btn" >Event Photos</button>
-  </a>
-  <a href = "./portfolio-family.html">
-    <button class ="btn" >Family Photos</button>
-  </a>
-  <a href = "./portfolio-seniorphotos.html">
-  <button class ="btn" >Senior Photos</button>
-</a>
-</div>
-`
-}
-
 const photoComponent = {
   template: `
     <div class="post post-item col-md-4 col-sm-6 col-xs-12">
@@ -170,7 +148,6 @@ var app = new Vue({
    },
   components: {
     photoComponent,
-    portfolioSectionLinks,
     photoSections
   },
   computed:{
@@ -206,9 +183,8 @@ var app = new Vue({
   created(){
    portfolioCategory === "allPhotos"? this.displayedPhotos = this.allPhotos : this.displayedPhotos = this.allPhotos.filter(photo => photo.category === portfolioCategory)
    document.addEventListener('contextmenu',e => {
-    e.preventDefault();
+    // e.preventDefault();
     const copyright = document.querySelector("#copyright")
-    console.log(copyright)
     copyright.style.display = "block";
     setTimeout(()=>{copyright.style.display="none"},2000)
   })

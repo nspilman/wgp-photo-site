@@ -68,10 +68,19 @@
 				<ul class="menu">
 			        <li class="leaf"><a href="./" title="">Home</a></li>
 			        <li class="leaf"><a href="./#about" title="">About</a></li>
-			        <li class="leaf"><a href="./#services" title="">Services</a></li>
-					<li class="leaf"><a href="./portfolio.html" title="">Portfolio</a></li>
+					<li class="leaf"><a href="./#services" title="">Services</a></li>
+					<li class="expanded">
+						<a href="./portfolio.html" title="">Portfolio</a>
+			            	<ul class="menu">
+			                	<li><a class = "portfolioMenuDropdown" href="./portfolio-weddings.html" title="">Wedding Photos</a></li>
+			                	<li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Event Photos</a></li>
+			                	<li><a class = "portfolioMenuDropdown" href="./portfolio-family.html" title="">Family Photos</a></li>
+			                	<li><a class = "portfolioMenuDropdown" href="./portfolio-seniorphotos.html" title="">Senior Photos</a></li>
+							</ul>
+					</li>							
+					<li class="leaf"></li>
 					<li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
-			        <li class="last leaf"><a href="./#contact" title="">Contact</a></li>
+					<li class="last leaf"><a href="./#contact" title="">Contact</a></li>
 			    </ul>
 			</div>
 		</div>
@@ -89,14 +98,6 @@
 						<div class="ts-item-background">
 							<img :src="currentPhoto" alt="background" class="img-fluid header-photo">
 							<div class="bg-overlay"></div>
-						</div>
-						<div class="theme-slider-control slide-crt2">
-							<span class="usc-control usc-preview"><i class="fa fa-angle-left"></i></span>
-							<span class="usc-control usc-next"><i class="fa fa-angle-right" @click="nextPhoto"></i></span>
-							<div class="bar">
-								<div class="bar-left" @click="previousPhoto">Previous Photo</div>
-								<div class="bar-right" @click="nextPhoto"> Next Photo</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -174,7 +175,6 @@
 				<div class="parallax-content">
 					<div class="section-title">
 						<h3 class="h3 bor-underline">Services</h3>
-						<span>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar onec rutrum congue </span>
 					</div>
 					<div class="section-content">
 						<div class="project-list style-projt2">
@@ -366,34 +366,12 @@
 								<li><a href="mailto:WineGuyPhotography@gmail.com"><span class="icon-square"><i class="fa fa-envelope"></i></span>WineGuyPhotography@gmail.com</a></li>
 							</ul>
 						</div>
-						<img src="images/wineguy_photos/contact_section.jpeg"/>
 					</div>
 				</div>
 				<div class="col-sm-5 col-xs-12 col-sm-offset-2">
 					<div class="theme-contact">
-						<h3 class="h3 bor-underline">Contact</h3>
-						<p>Bencidunt nibh pulvinar onec rutrum congue </p>
-						<div class="form">
-							<form class="contact-form" action="processContact.php" method="post">
-								<div class="form-input">
-									<input type="text" placeholder="Name" name="name">
-								</div>
-								<div class="form-input">
-									<input type="text" placeholder="Email" name="email">
-								</div>
-								<div class="form-input">
-									<input type="text" placeholder="Subject" name="subject">
-								</div>
-								<div class="form-textarea">
-									<textarea placeholder="Messange" name="message"></textarea>
-								</div>
-								<div class="form-submit">
-									<input class="submit-contact type-but but-light pull-right" type="submit" value="Send message">
-								</div>
-								<div id="contact-content"></div>
-							</form>
+							<img src="images/wineguy_photos/contact_section.jpeg"/>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -405,7 +383,7 @@
 					<div class="footer-copyright-content">
 						<div class="ds-table-auto">
 							<div class="ds-cell-auto">
-								<p>© 2014 Zankover designs - all right reserved </p>
+								<p>© 2019 Wine Guy Photography - all right reserved </p>
 								<div class="social-link nav-icon-style2">
 									<ul>
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
