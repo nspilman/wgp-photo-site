@@ -43,7 +43,7 @@ const photoSlider = new Vue({
       created(){
         this.autoplay()
         document.addEventListener('contextmenu',e => {
-          // e.preventDefault();
+          e.preventDefault();
           const copyright = document.querySelector("#copyright")
           copyright.style.display = "block";
           setTimeout(()=>{copyright.style.display="none"},2000)
@@ -71,6 +71,7 @@ const photoSlider = new Vue({
       `,
       data(){
         return{
+          wedding:'wedding',
           packages:{
             wedding:
             [
@@ -227,30 +228,6 @@ const photoSlider = new Vue({
         }
       },
       created(){
-        console.log(
-        this.getHeight()
-        )
       }
 
     }
-
-
-const services = new Vue({
-  el:"#services",
-  data:{
-    pricingModal:null,
-    category:null,
-  },
-  methods:{
-    clicked(category){
-      this.pricingModal = true;
-      this.category = category;
-    },
-    closeModal(){
-      this.pricingModal = null;
-    }
-  },
-  components:{
-    pricecomponent
-  }
-})

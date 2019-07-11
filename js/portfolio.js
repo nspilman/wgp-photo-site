@@ -183,7 +183,7 @@ var app = new Vue({
   created(){
    portfolioCategory === "allPhotos"? this.displayedPhotos = this.allPhotos : this.displayedPhotos = this.allPhotos.filter(photo => photo.category === portfolioCategory)
    document.addEventListener('contextmenu',e => {
-    // e.preventDefault();
+    e.preventDefault();
     const copyright = document.querySelector("#copyright")
     copyright.style.display = "block";
     setTimeout(()=>{copyright.style.display="none"},2000)

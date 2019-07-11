@@ -160,18 +160,8 @@
 
 	<!-- Section Services -->
 	<section id="services" class="section section-img img-half section-services" style="min-height:150vh">
-		<div id="pricingModalHeight">
-			<div v-if="pricingModal" class ="pricingModalWrapper" @click="closeModal">
-					<div class = "pricingModal">
-					  <div id="pricing">
-						  <pricecomponent :service="category"/>
-					  </div>
-				
-					</div>
-				  </div>
-				</div>
 		<div class="row">
-			<div v-if="!pricingModal" class="col-lg-6 col-lg-offset-6" id="service-content">
+			<div class="col-lg-6 col-lg-offset-6" id="service-content">
 				<div class="parallax-content">
 					<div class="section-title">
 						<h3 class="h3 bor-underline">Services</h3>
@@ -189,8 +179,9 @@
 									</div>
 									<div class="link-detail">
 										<a href="./portfolio-weddings.html" class="btn btn-default">See More</a>
-										<button class="btn btn-default"@click="clicked('wedding')">Pricing</button>
-
+										<a href = "./pricing-weddings.html">
+											<button class="btn btn-default">Pricing</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -205,7 +196,9 @@
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-seniorphotos.html" class="btn btn-default">See More</a>
-											<button class="btn btn-default"@click="clicked('senior')">Pricing</button>
+											<a href = "./pricing-seniorphotos.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
 										</div>
 								</div>
 							</div>
@@ -220,8 +213,9 @@
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-family.html" class="btn btn-default">See More</a>
-										<button class="btn btn-default"@click="clicked('family')">Pricing</button>
-
+											<a href = "./pricing-family.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
 										</div>
 								</div>
 							</div>
@@ -236,7 +230,9 @@
 									</div>
 									<div class="link-detail">
 											<a href="./portfolio-events.html" class="btn btn-default">See More</a>
-										<button class="btn btn-default"@click="clicked('event')">Pricing</button>
+											<a href = "./pricing-events.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
 										</div>
 								</div>
 							</div>
