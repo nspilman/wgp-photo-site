@@ -168,10 +168,6 @@ const pricecomponent = {
     },
     props:['service'],
     methods:{
-      getHeight(){
-        const divRaw = document.querySelector('#pricingModalHeight')
-        return divRaw.clientHeight
-      }
     },
     created(){
     }
@@ -180,24 +176,14 @@ const pricecomponent = {
 
   const services = new Vue({
     el:"#services",
-    data:{
-        wedding:'wedding',
-      pricingModal:null,
-      category:'wedding',
-    },
-    methods:{
-      clicked(category){
-        this.pricingModal = true;
-        this.category = category;
-      },
-      closeModal(){
-        this.pricingModal = null;
-      }
-    },
-    created(){
-        console.log(this.category)
-    },
     components:{
       pricecomponent
+    }
+  })
+
+  const header = new Vue({
+    el:"#header",
+    components:{
+      menucomponent
     }
   })

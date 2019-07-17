@@ -17,46 +17,8 @@
 				<h5 style="color:white;">It is illegal to download or copy any images from this website</h5>
 			</div>
         <header id="header" class="header-v2">
-        <div class="nav" style="background-color:rgb(255,255,255,.5)">
-            <div class="theme-logo">
-                <div class="theme-logo-content">
-                    <a href="index.html"><img src="images/wineguy_photos/wineguy_logo.png" style="max-height: 10vh; max-width: 40vw;" alt="logo"></a>
-                </div>
-            </div>
-            
-            <div class="trigger-menu">
-                <div class="shape">
-                    <div class="bar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <i class="fa fa-arrow-right"></i>
-                </div>
-            </div>
-    
-            <div class="block-menu">
-                <div class="menu-content">
-                    <ul class="menu">
-                        <li class="leaf"><a href="./" title="">Home</a></li>
-                        <li class="leaf"><a href="./#about" title="">About</a></li>
-                        <li class="leaf"><a href="./#services" title="">Services</a></li>
-                        <li class="expanded">
-                                <a href="./portfolio.html" title="">Portfolio</a>
-                                        <ul class="menu">
-                                            <li><a class = "portfolioMenuDropdown" href="./portfolio-weddings.html" title="">Wedding Photos</a></li>
-                                            <li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Event Photos</a></li>
-                                            <li><a class = "portfolioMenuDropdown" href="./portfolio-family.html" title="">Family Photos</a></li>
-                                            <li><a class = "portfolioMenuDropdown" href="./portfolio-seniorphotos.html" title="">Senior Photos</a></li>
-                                        </ul>
-                        </li>
-                        <li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
-                        <li class="last leaf"><a href="./#contact" title="">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-    
-        </div>
+            <menucomponent></menucomponent>
+</header>
 <section id="testimonials" class="section section-history">
     <div class="container" v-for="testimonial in testimonials">
         <div class="row">
@@ -81,56 +43,7 @@
 
 </section>
 
-<footer id="contact">
-	<div class="footer-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-5 col-xs-12">
-					<div class="theme-info">
-						<div class="theme-logo">
-							<div class="logo-content-img">
-								<img src="images/wineguy_photos/wineguy_logo.png" style="background-color:ivory; border-radius:1em; max-height: 10vh; max-width: 40vw;" alt="logo">
-							</div>
-						</div>
-						<div class="theme-address">
-							<ul class="text-link">
-								<li><span class="icon-square"><i class="fa fa-phone"></i></span>608-445-5161</li>
-								<li><a href="mailto:WineGuyPhotography@gmail.com"><span class="icon-square"><i class="fa fa-envelope"></i></span>WineGuyPhotography@gmail.com</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-5 col-xs-12 col-sm-offset-2">
-					<div class="theme-contact">
-							<img src="images/wineguy_photos/contact_section.jpeg"/>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="footer-copyright-content">
-						<div class="ds-table-auto">
-							<div class="ds-cell-auto">
-								<p>© 2019 Wine Guy Photography - all right reserved </p>
-								<div class="social-link nav-icon-style2">
-									<ul>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-behance"></i></a></li>
-										<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</div>	
+<footer id="contact">	
 </footer>
 </body>
 
@@ -146,5 +59,7 @@
 <script type="text/javascript" src="js/libs/jquery.infinitescroll.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
+<script type="text/javascript" src="js/menu-component.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
 <script type="text/javascript" src="js/clientLove.js"></script>

@@ -45,46 +45,8 @@
 	<h5 style="color:white;">It is illegal to download or copy any images from this website</h5>
 </div>
 <header id="header" class="header-v2">
-		<div class="nav" style="background-color:rgb(255,255,255,.5)">
-				<div class="theme-logo">
-					<div class="theme-logo-content">
-						<a href="index.html"><img src="images/wineguy_photos/wineguy_logo.png" style="max-height: 10vh; max-width: 40vw;" alt="logo"></a>
-					</div>
-				</div>
-				
-				<div class="trigger-menu">
-					<div class="shape">
-						<div class="bar">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<i class="fa fa-arrow-right"></i>
-					</div>
-				</div>
-		
-				<div class="block-menu">
-					<div class="menu-content">
-						<ul class="menu">
-							<li class="leaf"><a href="/" title="">Home</a></li>
-							<li class="leaf"><a href="/#about" title="">About</a></li>
-							<li class="leaf"><a href="/#services" title="">Services</a></li>
-							<li class="expanded">
-									<a href="./portfolio.html" title="">Portfolio</a>
-										<ul class="menu">
-											<li><a class = "portfolioMenuDropdown" href="./portfolio-weddings.html" title="">Wedding Photos</a></li>
-											<li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Event Photos</a></li>
-											<li><a class = "portfolioMenuDropdown" href="./portfolio-family.html" title="">Family Photos</a></li>
-											<li><a class = "portfolioMenuDropdown" href="./portfolio-seniorphotos.html" title="">Senior Photos</a></li>
-										</ul>
-							</li>	
-							<li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
-							<li class="last leaf"><a href="#contact" title="">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-		
-			</div>
+	<menucomponent></menucomponent>
+
 			<div class="header">
 				<div class="bg-header" style="height:5vh">
 			
@@ -120,84 +82,8 @@
 	</section>
 </div>
 <footer id="contact">
-		<div class="footer-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-5 col-xs-12">
-						<div class="theme-info">
-							<div class="theme-logo">
-								<div class="logo-content-img">
-									<img src="images/wineguy_photos/wineguy_logo.png" style="background-color:ivory; border-radius:1em; max-height: 10vh; max-width: 40vw;" alt="logo">
-								</div>
-							</div>
-							<div class="theme-description bor-underline">
-								<p>I'm Dan Steffen and my "day job" is as a "Wine Guy" working for an importer and selling to wine distributors around the country. Photography is a passion of mine that I've enjoyed since I received my first camera when I was 9. In the last several years, however, I've become quite serious about it.
-	
-										Wine Guy Photography is the natural extention.
-										
-										​Whether your shoot is indoors or out, I can capture the images you'll always cherish. Whatever your photography needs, I can help.</p>
-							</div>
-							<div class="theme-address">
-								<ul class="text-link">
-									<li><span class="icon-square"><i class="fa fa-phone"></i></span>608-445-5161</li>
-									<li><a href="mailto:WineGuyPhotography@gmail.com"><span class="icon-square"><i class="fa fa-envelope"></i></span>WineGuyPhotography@gmail.com</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-5 col-xs-12 col-sm-offset-2">
-						<div class="theme-contact">
-							<h3 class="h3 bor-underline">Contact</h3>
-							<p>Bencidunt nibh pulvinar onec rutrum congue </p>
-							<div class="form">
-								<form class="contact-form" action="processContact.php" method="post">
-									<div class="form-input">
-										<input type="text" placeholder="Name" name="name">
-									</div>
-									<div class="form-input">
-										<input type="text" placeholder="Email" name="email">
-									</div>
-									<div class="form-input">
-										<input type="text" placeholder="Subject" name="subject">
-									</div>
-									<div class="form-textarea">
-										<textarea placeholder="Messange" name="message"></textarea>
-									</div>
-									<div class="form-submit">
-										<input class="submit-contact type-but but-light pull-right" type="submit" value="Send message">
-									</div>
-									<div id="contact-content"></div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="footer-copyright-content">
-							<div class="ds-table-auto">
-								<div class="ds-cell-auto">
-									<p>© 2014 Zankover designs - all right reserved </p>
-									<div class="social-link nav-icon-style2">
-										<ul>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-behance"></i></a></li>
-											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>	
-	</footer>
+
+</footer>
 
 <!-- SCRIPT -->
 <script>const portfolioCategory = "familyPhotos" </script>
@@ -215,6 +101,8 @@
 <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/menu-component.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/portfolio.js"></script>
 

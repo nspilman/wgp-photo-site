@@ -148,7 +148,8 @@ var app = new Vue({
    },
   components: {
     photoComponent,
-    photoSections
+    photoSections,
+    menucomponent,
   },
   computed:{
     categories(){
@@ -189,4 +190,11 @@ var app = new Vue({
     setTimeout(()=>{copyright.style.display="none"},2000)
   })
   }
+});
+
+var header = new Vue({
+  el: "#header",
+  components: {
+    menucomponent,
+  },
 });

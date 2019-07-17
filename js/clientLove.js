@@ -34,3 +34,11 @@ var app = new Vue({
     })
    }
   })
+
+
+var header = new Vue({
+  el: "#header",
+  components:{
+    menucomponent,
+  }
+  })

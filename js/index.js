@@ -1,5 +1,7 @@
+
+
 const photoSlider = new Vue({
-    el: "#homepageSlider",
+    el: "#header",
     data: {
       homepagePhotos:[
           'images/photos_from_dan/homepageSlider/BoysAlbumCoverSunflowerscopy2.jpg',
@@ -20,7 +22,7 @@ const photoSlider = new Vue({
     autoplay_bool:true,
      },
     components: {
-      
+      menucomponent,
     },
     computed:{
       currentPhoto(){
