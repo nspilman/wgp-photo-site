@@ -1,7 +1,7 @@
 const allPhotos = [
   { category: "eventPhotos", categoryName:"Event Photos", url: "DSC_8335copy.jpg" },
   { category: "eventPhotos", categoryName:"Event Photos", url: "Womens March117-1copy.jpg" },
-  { category: "eventPhotos", categoryName:"Event Photos", url: "Quinciñera72316-079copy.jpg" },
+  { category: "eventPhotos", categoryName:"Event Photos", url: "Quincinera72316-079copy.jpg" },
   { category: "eventPhotos", categoryName:"Event Photos", url: "DSC_1189-2copy.jpg" },
   { category: "eventPhotos", categoryName:"Event Photos", url: "DSC_6852-2copy.jpg" },
   { category: "eventPhotos", categoryName:"Event Photos", url: "DSC_8377copy.jpg" },
