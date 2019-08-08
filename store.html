@@ -61,12 +61,13 @@
 <div class="main-page bg-gray padding-tn">
 	<section class="section-blog-massory">
 		<div class="container">
+			<div class = "section-content">
 			<span id = "storeText">
 			<p>
 					All of the images in my Galleries are available for sale as fine art metal or canvas prints in various sizes from small to large. To purchase a print simply click on the “Contact to Purchase” button and send me the name of the image, size you’d like, and whether you’d like metal or canvas. If you don't find the size you'd like, custom prints are available. 
 			</p>
 			<p>	
-				icensing of images is welcome for use in the hospitality industries and some commercial usage. For licensing information and a price quote please contact me.
+				Licensing of images is welcome for use in the hospitality industries and some commercial usage. For licensing information and a price quote please contact me.
 		</p>	
 		<p>	
 
@@ -80,16 +81,20 @@
 
 			</p>
 		</span>
+	</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="post-content" id="portfolio-photos">
 						<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
 							<div class = "photoModal">
 							  <img :src="selectedPhoto" alt="photograph">	
+							  <h4 style="color:white;">
+								{{selectedPhotoName}}
+							</h4>
 							</div>
 						  </div>
 						  <div id="type-masory" class="blog-list blog-masory row">
-								<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :filepath="'./images/store/'+ photo.category + '/' + photo.url"/>
+								<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :photo="photo" :filepath="'./images/store/'+ photo.category + '/' + photo.url"/>
 							</div>
 					</div>
 				</div>	
