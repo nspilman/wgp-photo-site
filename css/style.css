@@ -3322,6 +3322,7 @@ footer .bor-underline:after {
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding:1em;
     z-index: 3;
 }
