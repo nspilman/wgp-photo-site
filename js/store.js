@@ -15,30 +15,30 @@ const categoryHash = {
 }
 
 const allPhotos = [
-    {category:"nature",categoryName:"Nature Photos",url:"Sunflower-Bumblebee-1.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Sunflower-Bumblebee-2.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Baby-Sunflower.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Loon-Family-Swim.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Great-Horned-Owl-with-baby.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Cows-Grazing.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Bald-Eagle-Liftoff.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Mallard-Family-in-a-Log.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Winter-Robin.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Autumn-at-Holy-Hill.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Eastern-Bluebird.jpg"},
-    {category:"nature",categoryName:"Nature Photos",url:"Drake-Woody-in-the-Marsh.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"île-de-la-cité-at-sunrise.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-Dusk.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fishing-Boats-Garda-Lake.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Womens-March-1-17-1-copy-2.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Piazza-San-Marco-Wedding-B:W.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-on-Seine-at-Sunset.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Sunset-from-Spanish-Steps.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Notre-Dame-Pink-Blossoms.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Capitol-Tulips-2017-copy-2.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-from-Arc-d'Triomphe-B:W.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fireworks-Shake-the-Lake-2.jpg"},
-    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fireworks-Shake-the-Lake-1.jpg"},
+    {category:"nature",categoryName:"Nature Photos",url:"Sunflower-Bumblebee-1.jpg",name:"Sunflower Bumblebee 1"},
+    {category:"nature",categoryName:"Nature Photos",url:"Sunflower-Bumblebee-2.jpg",name:"Sunflower Bumblebee 2"},
+    {category:"nature",categoryName:"Nature Photos",url:"Baby-Sunflower.jpg",name:"Baby Sunflower"},
+    {category:"nature",categoryName:"Nature Photos",url:"Loon-Family-Swim.jpg",name:"Loom Family Swim"},
+    {category:"nature",categoryName:"Nature Photos",url:"Great-Horned-Owl-with-baby.jpg",name:"Great Horned Own With Baby"},
+    {category:"nature",categoryName:"Nature Photos",url:"Cows-Grazing.jpg",name:"Cows Grazing"},
+    {category:"nature",categoryName:"Nature Photos",url:"Bald-Eagle-Liftoff.jpg",name:"Bald Eagle Liftoff"},
+    {category:"nature",categoryName:"Nature Photos",url:"Mallard-Family-in-a-Log.jpg",name:"Mallard Family in a Log"},
+    {category:"nature",categoryName:"Nature Photos",url:"Winter-Robin.jpg",name:"Winter Robin"},
+    {category:"nature",categoryName:"Nature Photos",url:"Autumn-at-Holy-Hill.jpg",name:"Autumn at Holy Hill"},
+    {category:"nature",categoryName:"Nature Photos",url:"Eastern-Bluebird.jpg",name:"Eastern Bluebird"},
+    {category:"nature",categoryName:"Nature Photos",url:"Drake-Woody-in-the-Marsh.jpg",name:"Drake Woody in the Marsh"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"île-de-la-cité-at-sunrise.jpg",name:"île de la cite at sunrise "},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-Dusk.jpg",name:"Eiffel Tower at Dusk"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fishing-Boats-Garda-Lake.jpg",name:"Fishing Boats Garda Lake"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Womens-March-1-17-1-copy-2.jpg",name:"Women's March"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Piazza-San-Marco-Wedding-B:W.jpg",name:"Piazza San Marco Wedding"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-on-Seine-at-Sunset.jpg",name:"Eiffel Tower on the Seine at Sunset"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Sunset-from-Spanish-Steps.jpg",name:"Sunset from the Spanish Steps"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Notre-Dame-Pink-Blossoms.jpg",name:"Notre Dame Pink Blossoms"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Capitol-Tulips-2017-copy-2.jpg",name:"Capitol Tulips"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Eiffel-Tower-from-Arc-d'Triomphe-B:W.jpg",name:"Eiffel Tower from Arc d'Triomphe - B:W"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fireworks-Shake-the-Lake-2.jpg",name:"Fireworks - Shake the Lake 2"},
+    {category:"cityscape",categoryName:"Cityscape Photos",url:"Fireworks-Shake-the-Lake-1.jpg",name:"Fireworks - Shake the Lake 1"},
   ];
   
   const photoComponent = {
@@ -49,16 +49,22 @@ const allPhotos = [
               <img @click="sendOpenImageMessageToParent" :src="filepath" alt="photograph">	
           </div>
       </div>
+      <div class = "w-100 text-center">
+      <h4>
+        {{photo.name}}
+        </h4>
+      </div>
+
   </div>
       `,
-    props: ["filepath"],
+    props: ["filepath","photo"],
     data(){
       return{
       }
     },
     methods:{
       sendOpenImageMessageToParent(){
-        this.$emit('opened-image',this.filepath)
+        this.$emit('opened-image',{filepath:this.filepath,photo:this.photo})
       }
     },
     created(){
@@ -87,7 +93,8 @@ const allPhotos = [
       categoryHash:categoryHash,
       displayedPhotos:allPhotos,
       selectedPhoto:null,
-      hideArray:['.nav','#contact','.header',"#storeText"]
+      hideArray:['.nav','#contact','.header',"#storeText"],
+      selectedPhotoName:null,
      },
     components: {
       photoComponent,
@@ -115,7 +122,8 @@ const allPhotos = [
   
       },
       openImage(e){
-        this.selectedPhoto = e;
+        this.selectedPhoto = e.filepath;
+        this.selectedPhotoName = e.photo.name;
         this.toggleShow()
         
       },
