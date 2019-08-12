@@ -44,6 +44,7 @@ const menucomponent = {
                 </li>									
                 <li class="leaf"></li>
                 <li class="leaf"><a href="./clientLove.html" title="">Client Love</a></li>
+                <li class="leaf"><a href="./store.html" title="">Store</a></li>
                 <li class="last leaf"><a href="./#contact" title="">Contact</a></li>
             </ul>
         </div>
