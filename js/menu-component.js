@@ -22,7 +22,6 @@ const menucomponent = {
         <div class="menu-content">
             <ul class="menu">
                 <li class="leaf"><a href="./" title="">Home</a></li>
-                <li class="leaf"><a href="./#about" title="">About</a></li>
                 <li class="leaf"><a href="./#services" title="">Services</a></li>
                 <li class="expanded">
                     <a href="./portfolio.html" title="">Portfolio</a>
