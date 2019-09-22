@@ -71,16 +71,14 @@
 	<section class="section-blog-massory">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="post-content" id="portfolio-photos">
+				<div class="col-md-12" id="portfolio-photos-wrapper">
+					<div class="post-content"  id="portfolio-photos">
 						<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
 							<div class = "photoModal">
 							  <img :src="selectedPhoto" alt="photograph">	
 							</div>
 						  </div>
-						  <div id="type-masory" class="blog-list blog-masory row">
-								<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :filepath="'./images/photos_from_dan/'+ photo.category + '/' + photo.url"/>
-							</div>
+						<photo-component @opened-image="openImage" v-for="photo in photos" :filepath="photo"/>
 					</div>
 				</div>	
 			</div>
@@ -91,7 +89,7 @@
 </footer>
 
 <!-- SCRIPT -->
-<script>const portfolioCategory = "allPhotos" </script>
+<script>const portfolioCategory = "all" </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.owl.carousel.js"></script>

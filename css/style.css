@@ -3426,3 +3426,20 @@ footer .bor-underline:after {
         margin-bottom: 40px !important;
     }
 }
+
+#portfolio-photos{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(25vw,1fr));
+    /* grid-gap: 1px; */
+    grid-auto-rows:10px;
+}
+
+.section-blog-massory   
+{
+    min-height: 80vh;
+}
+
+.portfolio-image{
+    max-width: 25vw;;
+    border-radius: 1em;
+}

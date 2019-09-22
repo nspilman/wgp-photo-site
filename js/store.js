@@ -43,31 +43,31 @@ const allPhotos = [
   
   const photoComponent = {
     template: `
-      <div class="post post-item col-md-4 col-sm-6 col-xs-12">
-      <div class="post-item-content">
-          <div class="blog-item-header">
-              <img @click="sendOpenImageMessageToParent" :src="filepath" alt="photograph">	
-          </div>
-      </div>
-      <div class = "w-100 text-center">
-      <h4>
-        {{photo.name}}
-        </h4>
-      </div>
-
-  </div>
-      `,
+    <span class='portfolio-image' :style="{gridRowEnd:'span '+ spans }">
+      <img @click="sendOpenImageMessageToParent" ref="imageRef"  @load="setSpans" :style="{gridRowEnd:'span '+ spans }" :src="filepath" alt="photograph">	
+   
+   <h4>
+      {{photo.name}}
+      </h4>
+      </span>
+          `,
     props: ["filepath","photo"],
     data(){
       return{
+        spans:0,
       }
     },
     methods:{
       sendOpenImageMessageToParent(){
         this.$emit('opened-image',{filepath:this.filepath,photo:this.photo})
+      },
+      setSpans(){
+        const {imageRef}  = this.$refs;
+        const height = imageRef.clientHeight
+        const width = imageRef.clientWidth
+        const spans = Math.ceil(height / 10 + 4)
+        this.spans = spans;
       }
-    },
-    created(){
     },
   };
   
@@ -87,7 +87,7 @@ const allPhotos = [
   }
   
   var app = new Vue({
-    el: "#portfolio-photos",
+    el: "#store",
     data: {
       allPhotos: allPhotos,
       categoryHash:categoryHash,

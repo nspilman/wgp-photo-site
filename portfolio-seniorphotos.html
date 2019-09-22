@@ -70,18 +70,22 @@
 	<section class="section-blog-massory">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-						<div class="post-content" id="portfolio-photos">
-								<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
-									<div class = "photoModal">
-									  <img :src="selectedPhoto" alt="photograph">	
-									</div>
-								  </div>
-								  <div id="type-masory" class="blog-list blog-masory row">
-										<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :filepath="'./images/photos_from_dan/'+ photo.category + '/' + photo.url"/>
-									</div>
-							</div>
-				</div>	
+				<div class="col-md-12" id="portfolio-photos-wrapper">
+						<div v-if="isLoading" class='row'>
+								<h1 class="text-center" :style="{color:'black'}">Loading</h1>
+								<div class="my-5" v-for="image in 12">
+										<img  class='col-sm-4'src="./images/wineguy_photos/wineguy_logo.png">
+								</div>
+						</div>
+					<div class="post-content" v-if="!isLoading" id="portfolio-photos">
+							<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
+								<div class = "photoModal">
+								  <img :src="selectedPhoto" alt="photograph">	
+								</div>
+							  </div>
+							<photo-component @opened-image="openImage" v-for="(photo,index) in photos" :index="index" :filepath="photo"/>
+						</div>
+			</div>	
 			</div>
 		</div>
 	</section>
@@ -90,7 +94,7 @@
 </footer>
 
 <!-- SCRIPT -->
-<script> const portfolioCategory = "seniorPhotos";
+<script> const portfolioCategory = "photos-senior";
 console.log(portfolioCategory) </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>

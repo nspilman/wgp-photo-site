@@ -97,9 +97,8 @@
 		</div>
 
 	</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="post-content" id="portfolio-photos">
+			<div class="row" style="padding-top:1em">
+				<div class="col-md-12" id="store">
 						<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
 							<div class = "photoModal">
 							  <img :src="selectedPhoto" alt="photograph">	
@@ -108,12 +107,11 @@
 							</h4>
 							</div>
 						  </div>
-						  <div id="type-masory" class="blog-list blog-masory row">
+						  <div class="post-content" id="portfolio-photos">
 								<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :photo="photo" :filepath="'./images/store/'+ photo.category + '/' + photo.url"/>
 							</div>
 					</div>
 				</div>	
-			</div>
 		</div>
 	</section>
 </div>
