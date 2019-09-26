@@ -72,10 +72,9 @@
 						<div v-if="isLoading" class='row'>
 								<h1 class="text-center" :style="{color:'black'}">Loading</h1>
 								<div class="my-5" v-for="image in 12">
-										<img  class='col-sm-4'src="./images/wineguy_photos/wineguy_logo.png">
+										<img  class='col-sm-3' src="./images/Cube-1s-200px.svg">
 								</div>
 						</div>
-
 						<div class="post-content" v-if="!isLoading" id="portfolio-photos">
 								<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
 									<div class = "photoModal">

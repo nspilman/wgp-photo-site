@@ -4,22 +4,11 @@ const photoSlider = new Vue({
     el: "#header",
     data: {
       homepagePhotos:[
-          'images/photos_from_dan/homepageSlider/BoysAlbumCoverSunflowerscopy2.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_0353-2.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_2926.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_4096.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_4876.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_5055.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_5694.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_6302.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_7668.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_8440-2.jpg',
-          'images/photos_from_dan/homepageSlider/DSC_8891.jpg',
-          'images/photos_from_dan/homepageSlider/EmmyWiedemann.jpg',
-          'images/photos_from_dan/homepageSlider/MakenzieWallace.jpg'
     ],
     currentPhotoIndex:0,
     autoplay_bool:true,
+    isLoading:true,
+    imageLoaded:0,
      },
     components: {
       menucomponent,
@@ -31,6 +20,29 @@ const photoSlider = new Vue({
     
     },
     methods:{
+      async getPhotosFromAws(portfolioCategory){
+        const url = `https://py5e37ug41.execute-api.us-east-1.amazonaws.com/default/getPhotosByName?category=${portfolioCategory}`
+        const resp = await fetch(url)
+        const json = await resp.json()
+        for(let i = 1; i < await json.length ; i ++){
+          this.homepagePhotos.push(await json[i])
+        }
+        this.loadPhotos();
+      },
+    loadPhotos(){
+      this.homepagePhotos.forEach(photo =>{
+        const img = new Image();
+        img.src = photo;
+      img.onload = () => {
+        this.imageLoaded++;
+        if (this.imageLoaded > 6) {
+          this.isLoading = false;
+          return
+        }}
+        },
+        this.autoplay()
+        )
+  },
       nextPhoto(){
         this.currentPhotoIndex < this.homepagePhotos.length - 1 ? this.currentPhotoIndex++ : this.currentPhotoIndex = 0;
       },
@@ -43,7 +55,7 @@ const photoSlider = new Vue({
       }
     },
       created(){
-        this.autoplay()
+        this.getPhotosFromAws('photos-homepage-slider')
         document.addEventListener('contextmenu',e => {
           e.preventDefault();
           const copyright = document.querySelector("#copyright")
@@ -52,7 +64,7 @@ const photoSlider = new Vue({
         })
       }
     })
-
+  
     const pricecomponent = {
       template:`
       <div class = "container" style="padding-top:5em;">

@@ -3443,3 +3443,11 @@ footer .bor-underline:after {
     max-width: 25vw;;
     border-radius: 1em;
 }
+
+.ts-item-background{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}

@@ -65,7 +65,8 @@
 							<p>Professional &amp; Affordable</p>
 						</div>
 						<div class="ts-item-background">
-							<img :src="currentPhoto" alt="background" class="img-fluid header-photo">
+							<img v-if="isLoading" src="./images/Cube-1s-200px.svg"/>
+							<img v-if="!isLoading" :src="currentPhoto" alt="background" class="img-fluid header-photo">
 							<div class="bg-overlay"></div>
 						</div>
 					</div>
