@@ -3459,9 +3459,12 @@ footer .bor-underline:after {
     }
 
     .portfolio-image{
-        max-width: 100%;
+        height:auto;
         border-radius: 3em;
         padding: 1em;
+        max-width: 90vw;
+        max-height:80vh;
+
     }
     #portfolio-photos{
         display:flex;
