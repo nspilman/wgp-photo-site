@@ -2269,7 +2269,6 @@ footer .bor-underline:after {
 .frame-img {
     margin-top: 5px;
     position: relative;
-    background-image: url(../images/img2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -3456,6 +3455,7 @@ footer .bor-underline:after {
         display:flex;
         align-items: center;
         justify-content: center;
+        min-height:60vh;
     }
 
     .portfolio-image{
@@ -3469,6 +3469,20 @@ footer .bor-underline:after {
     #portfolio-photos{
         /* grid-template-columns: repeat(auto-fill,minmax(100vw,1fr)); */
         grid-auto-rows:10px;
+    }
+
+    .store-content{
+        grid-auto-rows:auto !important;
+        grid-gap:8px;
+    }
+
+    .store-photo-name{
+        display:none;
+    }
+
+    .store-image{
+        max-width:30vw;
+       
     }
     .photoModalWrapper{
         width:120vw;

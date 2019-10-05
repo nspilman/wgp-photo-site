@@ -97,8 +97,8 @@
 							</h4>
 							</div>
 						  </div>
-						  <div class="post-content" id="portfolio-photos">
-								<photo-component @opened-image="openImage" v-for="photo in displayedPhotos" :photo="photo" :filepath="'./images/store/'+ photo.category + '/' + photo.url"/>
+						  <div class="post-content store-content" id="portfolio-photos">
+										<photo-component @opened-image="openImage" v-for="(photo,index) in photos" :index="index" :filepath="photo"/>
 							</div>
 					</div>
 				</div>	
