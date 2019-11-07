@@ -58,6 +58,13 @@
 	</div>	
 </header>
 <div class="main-page bg-gray padding-tn">
+	<div v-if="isLoading" class='row'>
+								<h1 class="text-center" :style="{color:'black'}">Loading</h1>
+								<div class="my-5" v-for="image in 12">
+										<img  class='col-sm-3' src="./images/Cube-1s-200px.svg">
+								</div>
+						</div>
+
 <section class="section-blog-massory">
 		<div class="container">
 			<div class="row">

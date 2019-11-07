@@ -24,6 +24,8 @@ var app = new Vue({
   el: "#testimonials",
   data: {
     testimonials: clientLove,
+    imageLoaded:0,
+    isLoading:true,
    },
    created(){
       document.addEventListener('contextmenu',e => {
@@ -32,8 +34,19 @@ var app = new Vue({
       copyright.style.display = "block";
       setTimeout(()=>{copyright.style.display="none"},2000)
     })
+   },
+   methods:{
+    loadImage(){
+      console.log("does this ever get called?")
+        this.imageLoaded++;
+        if (this.imageLoaded > 6) {
+          this.isLoading = false;
+          console.log(this.isLoading)
+          return
+        }
    }
-  })
+  }
+})
 
 
 var header = new Vue({
