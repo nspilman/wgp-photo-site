@@ -13,7 +13,7 @@ def resizeImage(filepath,factor):
     except:
         pass
 
-root = './images/photos_from_dan/eventPhotos/'
+root = './images/photos_from_dan/clientLove/'
 
 def ignoreTest(string):
     return "ignore" in string
