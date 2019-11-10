@@ -20,14 +20,18 @@ const clientLove = [
 ];
 
 
+
 var app = new Vue({
   el: "#testimonials",
   data: {
-    testimonials: clientLove,
+    testimonials: [],
     imageLoaded:0,
     isLoading:true,
+    rootUrl: 'https://website-photographs.s3.amazonaws.com/photos-clientLove/',
+    photos:[],
    },
    created(){
+      this.getPhotosFromAws();
       document.addEventListener('contextmenu',e => {
       e.preventDefault();
       const copyright = document.querySelector("#copyright")
@@ -36,12 +40,40 @@ var app = new Vue({
     })
    },
    methods:{
+    async getPhotosFromAws(){
+      const url = `https://py5e37ug41.execute-api.us-east-1.amazonaws.com/default/getPhotosByName?category=photos-clientLove`
+      const resp = await fetch(url)
+      const json = await resp.json()
+      for(let i = 1; i < await json.length ; i ++){
+        this.photos.push(await json[i].split('?')[0].split('/')[4])
+      }
+      const testimonials = [] 
+      this.photos.forEach(async photo => {
+        try{
+          const text = await this.getText(photo.split(".")[0])
+          if(text.length > 0){
+            testimonials.push({url:this.rootUrl + photo,text:text})
+          }
+        }
+        catch{
+          return
+        }
+      });
+      
+      this.testimonials = testimonials;
+      
+      // this.loadPhotos();
+    },
+    async getText(filename){
+      const url = "https://u0f8kizng8.execute-api.us-east-1.amazonaws.com/default/GetPageTextByName?filename=" + filename;
+      const resp = await fetch(url)
+      const json = await resp.text()
+      return json;
+    },
     loadImage(){
-      console.log("does this ever get called?")
         this.imageLoaded++;
         if (this.imageLoaded > 6) {
           this.isLoading = false;
-          console.log(this.isLoading)
           return
         }
    }
