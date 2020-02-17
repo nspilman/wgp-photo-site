@@ -14,12 +14,6 @@ const photoSlider = new Vue({
   components: {
     menucomponent,
   },
-  computed: {
-    currentPhoto() {
-      return this.homepagePhotos[this.currentPhotoIndex]
-    }
-
-  },
   methods: {
     async getPhotosFromAws(portfolioCategory) {
       const url = `https://py5e37ug41.execute-api.us-east-1.amazonaws.com/default/getPhotosByName?category=${portfolioCategory}`
@@ -66,6 +60,9 @@ const photoSlider = new Vue({
   computed:{
     compiledMarkdown(){
       return marked(this.aboutSectionMarkdown, { sanitize: true })
+    },
+    currentPhoto() {
+      return this.homepagePhotos[this.currentPhotoIndex]
     }
   }
 })
@@ -117,9 +114,6 @@ const servicesSection = new Vue({
       const resp = await fetch(url);
       return resp.text();
     },
-    compileMarkdown(markdown){
-      return marked(this.markdown, { sanitize: true })
-    }
   },
   computed:{
     serviceSectionRendered(){
@@ -131,7 +125,6 @@ const servicesSection = new Vue({
   async created(){
     this.aboutSectionMarkdown =  await this.getHomePageText('about');
     this.servicesSectionMarkdown = await this.getHomePageText('services');
-    console.log(this.serviceSectionRendered)
   }
 })
 
