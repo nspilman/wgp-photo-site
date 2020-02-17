@@ -56,6 +56,7 @@ var app = new Vue({
           }
         }
         catch{
+          console.log(photo + " broke")
           return
         }
       });
