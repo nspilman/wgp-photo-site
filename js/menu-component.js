@@ -30,7 +30,8 @@ const menucomponent = {
                             <li><a class = "portfolioMenuDropdown" href="./portfolio-events.html" title="">Event Photos</a></li>
                             <li><a class = "portfolioMenuDropdown" href="./portfolio-family.html" title="">Family Photos</a></li>
                             <li><a class = "portfolioMenuDropdown" href="./portfolio-seniorphotos.html" title="">Senior Photos</a></li>
-                        </ul>
+                            <li><a class = "portfolioMenuDropdown" href="./pricing-aerial.html" title="">Aerial Photos</a></li>
+                            </ul>
                 </li>	
                 <li class="expanded">
                     <a href="./pricing.html" title="">Pricing</a>
@@ -39,6 +40,7 @@ const menucomponent = {
                             <li><a class = "portfolioMenuDropdown" href="./pricing-events.html" title="">Event Photos</a></li>
                             <li><a class = "portfolioMenuDropdown" href="./pricing-family.html" title="">Family Photos</a></li>
                             <li><a class = "portfolioMenuDropdown" href="./pricing-seniorphotos.html" title="">Senior Photos</a></li>
+                            <li><a class = "portfolioMenuDropdown" href="./pricing-aerial.html" title="">Aerial Photos</a></li>
                         </ul>
                 </li>									
                 <li class="leaf"></li>
