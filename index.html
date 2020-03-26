@@ -43,8 +43,7 @@
 <div id ="copyright" class='text-center p-3'>
 	<h5 style="color:white;">It is illegal to download or copy any images from this website</h5>
 </div>
-<div id="wrap">
-	
+
 <header id="header" class="header-v2">
 	<menucomponent></menucomponent>
 	<div class="header">
@@ -84,8 +83,32 @@
 				<div class="col-sm-7 col-xs-12">
 					<div class="section-title title-sty2">
 						<h3 class="h3 bor-underline">About</h3>
+						<span>Member - Professional Photographers of America</span>
 					</div>
-					<div v-html="compiledMarkdown"></div>
+					<div class="section-content content-italic">
+						<p>Hello and welcome! I am thrilled that you have taken the time to look at my work, and that you are considering booking Wine Guy Photography.
+						</p>
+						<p>
+							I’m Dan Steffen and I’ve been avidly pursuing all things photography since I received my first camera when I was 9 years old. Rather than a long and boring bio, I wanted to share a few “fun facts” about me so that you can get to know me a little more.
+						</p>
+							 <ul>
+								 <li>
+									The “Wine Guy” comes from my day job of working as a wine importer. I travel the country selling the wines I represent to wine distributors (who in turn sell to shops and restaurants). 30+ years in the Wine Biz.
+								</li>
+								<li>
+									Thanks to the wine business, I’ve been fortunate enough to see and photograph much of the world including Europe, Australia, Africa and South America.
+								</li>
+								<li>
+									My wife, Christine (who’s an amazing midwife & pre-natal yoga instructor!) and I were married in 2000 and we have 3 awesome boys (Ben, Julian and Samuel) a goofy Irish Doodle (Flynn), and a couple of cool cats (Squirrel & Possum).
+								</li>	
+								<li>
+									The boys are active in Volleyball and Ultimate Frisbee and nothing makes us happier than watching them compete.
+								</li>
+							 </ul>
+							<p>
+							​Whether your shoot is indoors or out, I can capture the images you'll always cherish. Whatever your photography needs, I can help.
+							
+							</p>
 						<div class="link-detail">
 							<a href="./portfolio.html" class="btn btn-default">My work</a>
 						</div>
@@ -106,14 +129,14 @@
 					</div>
 					<div class="section-content">
 						<div class="project-list style-projt2">
-							<div v-for="service in serviceSectionRendered" class="project-item">
+							<div class="project-item">
 								<div class="project-item-content">
 									<div class="project-header">
-										<span class="project-logo px-4"><i class="fa fa-camera"></i></span>
-										<div v-html="service[0]"></div>
+										<span class="project-logo"><i class="fa fa-pagelines"></i></span>
+										<h6 class="h6 project-title">WEDDINGS</h6>
 									</div>
 									<div class="project-body">
-										<div v-html="service[1]"></div>
+										<p>Your wedding day is one of the most important days of your life. I believe that you should choose a photographer that you feel a deep connection with, and whose style of images truly resonates with you.</p>
 									</div>
 									<div class="link-detail">
 										<a href="./portfolio-weddings.html" class="btn btn-default">See More</a>
@@ -121,6 +144,57 @@
 											<button class="btn btn-default">Pricing</button>
 										</a>
 									</div>
+								</div>
+							</div>
+							<div class="project-item">
+								<div class="project-item-content">
+									<div class="project-header">
+										<span class="project-logo"><i class="fa fa-lightbulb-o"></i></span>
+										<h6 class="h6 project-title">SENIOR PHOTOS</h6>
+									</div>
+									<div class="project-body">
+										<p>I absolutely love shooting Seniors! My sessions are less about taking a great portrait for the yearbook (although we’ll definitely do that!) and more about getting a ton of great images to commemorate this awesome rite of passage and moment in time.</p>
+									</div>
+									<div class="link-detail">
+											<a href="./portfolio-seniorphotos.html" class="btn btn-default">See More</a>
+											<a href = "./pricing-seniorphotos.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
+										</div>
+								</div>
+							</div>
+							<div class="project-item">
+								<div class="project-item-content">
+									<div class="project-header">
+										<span class="project-logo"><i class="fa fa-tint"></i></span>
+										<h6 class="h6 project-title">FAMILY AND PETS</h6>
+									</div>
+									<div class="project-body">
+										<p>Everybody finally together for the holidays? Want to capture the kids at this adorable age? New puppy? Whatever your portrait needs, I can make it happen for you.</p>
+									</div>
+									<div class="link-detail">
+											<a href="./portfolio-family.html" class="btn btn-default">See More</a>
+											<a href = "./pricing-family.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
+										</div>
+								</div>
+							</div>
+							<div class="project-item">
+								<div class="project-item-content">
+									<div class="project-header">
+										<span class="project-logo"><i class="fa fa-fire"></i></span>
+										<h6 class="h6 project-title">SPECIAL EVENTS</h6>
+									</div>
+									<div class="project-body">
+										<p>Whether it be a family reunion, bat mitzvah, quinceañera, anniversary, or birthday party. I’ll be there to commemorate your special event.</p>
+									</div>
+									<div class="link-detail">
+											<a href="./portfolio-events.html" class="btn btn-default">See More</a>
+											<a href = "./pricing-events.html">
+												<button class="btn btn-default">Pricing</button>
+											</a>
+										</div>
 								</div>
 							</div>
 						</div>
@@ -235,8 +309,6 @@
 <footer id="contact">
 
 </footer>
-</div>
-
 
 <!-- SCRIPT -->
 <script type="text/javascript" src="js/vue.js"></script>
@@ -254,8 +326,6 @@
 <script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/footer.js"></script>
-<script src="https://unpkg.com/marked@0.3.6"></script>
-<script src="https://unpkg.com/lodash@4.16.0"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
