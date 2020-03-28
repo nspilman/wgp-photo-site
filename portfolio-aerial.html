@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146610205-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-146610205-1');
+	</script>
+	
+    <title>Aerial Photos | Portfolio | Wine Guy Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" type="image/png" href="./images/wineguy_photos/wineguy_favicon.png"/>
+    
+    <!-- ///////////////// FONT  ///////////////// -->
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7cCrimson+Text:400,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- ///////////////// CSS  ///////////////// -->
+    
+	<link type="text/css" rel="stylesheet" href="css/font-awesome.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/magnific-popup.css"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/><!-- My CSS -->
+    <link type="text/css" rel="stylesheet" href="css/responsive.css"/>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+	<script>
+		document.addEventListener('contextmenu',e => {e.preventDefault()})
+	</script>
+</head>
+<body>
+
+<header id="header" class="header-v2">
+	<menucomponent></menucomponent>
+
+			<div class="header">
+				<div class="bg-header" style="height:5vh">
+			
+					<!-- <div class="bg-img bg-2"></div> -->
+					<!-- <div class="bg-overlay"></div> -->
+				</div>
+				<div class="title-header">
+					<h1 style="color: black">Aerial Photography</h1>
+				</div>
+			</div>	
+</header>
+<div class="main-page bg-gray padding-tn">
+	<section class="section-blog-massory">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" id="portfolio-photos-wrapper">
+						<div v-if="isLoading" class='row'>
+								<h1 class="text-center" :style="{color:'black'}">Loading</h1>
+								<div class="my-5" v-for="image in 12">
+										<img  class='col-sm-3' src="./images/Cube-1s-200px.svg">
+								</div>
+						</div>
+						<div class="post-content" v-if="!isLoading" id="portfolio-photos">
+								<div v-if="selectedPhoto" class ="photoModalWrapper" @click="closeImage">
+									<div class = "photoModal">
+									  <img :src="selectedPhoto" alt="photograph">	
+									</div>
+								  </div>
+								<photo-component @opened-image="openImage" v-for="(photo,index) in photos" :index="index" :filepath="photo"/>
+							</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+</div>
+<footer id="contact">
+</footer>
+
+<!-- SCRIPT -->
+<script>const portfolioCategory = "photos-aerial" </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/libs/jquery.owl.carousel.js"></script>
+<script type="text/javascript" src="js/libs/magnific-popup.js"></script>
+<script type="text/javascript" src="js/libs/jquery.appear.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/libs/jquery-isotope.js"></script>
+<script type="text/javascript" src="js/libs/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="js/libs/scrollspy.js"></script>
+<script type="text/javascript" src="js/libs/jquery.infinitescroll.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/libs/jquery.form.min.js"></script>
+<script type="text/javascript" src="js/menu-component.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/portfolio.js"></script>
+
+
+
+</body>
+</html>
